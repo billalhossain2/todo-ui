@@ -20,8 +20,92 @@
 
 <!-- custom css  -->
 <link rel="stylesheet" href="css/todo.css">
+<style>
+    body{
+        font-family: Poppins;
+    }
+</style>
 </head>
-<body>
-    
+<body class="bg-[#0a5f6e] min-h-screen  flex justify-center items-center">
+    <div class="bg-[#F5F7FA] rounded-3xl lg:p-6 p-3 mx-2  flex flex-col relative">
+        <header>
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <p class="text-[#A2A2BA]"> 28.07.2023 </p>
+                    <h1 class="font-semibold text-[#1E1A52] lg:text-3xl text-2xl">Today Tasks</h1>
+                </div>
+                <div class="bg-[#9500FF] h-10 w-10 rounded-full"></div>
+            </div>
+            <nav class="flex gap-5 mb-6">
+                <p class="text-[#434270]">All</p>
+                <p class="text-[#b3b4c0]">Completed</p>
+                <p class="text-[#b3b4c0]">Incompleted</p>
+            </nav>
+        </header>
+        <main class="relative">
+            <!-- todo - 1  -->
+            <div class="flex lg:flex-row items-center justify-between bg-[#FFFFFF] rounded-3xl drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5">
+                <div>
+                    <i class="fa-regular fa-square text-[#a6a9b3] lg:text-2xl cursor-pointer"></i>
+                </div>
+                <div class="border-l-[3px] border-solid even:border-[#ff0b54d2] odd:border-[#eefe] lg:pl-3 pl-1">
+                    <h1 class="lg:text-2xl text-[14px] text-[#1E1A52] font-semibold">Finish UI & UX Quickly</h1>
+                    <p class="text-[#200f2c] font-medium text-[10px] lg:text-[16px]">High Priority</p>
+                </div>
+                <div class="lg:space-x-3 space-x-1 lg:text-2xl">
+                    <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer"></i>
+                    <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer"></i>
+                </div>
+            </div>
+            <!-- todo - 1  -->
+            <div class="flex lg:flex-row items-center justify-between bg-[#FFFFFF] rounded-3xl drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5">
+                <div>
+                    <i class="fa-regular fa-square text-[#a6a9b3] lg:text-2xl cursor-pointer"></i>
+                </div>
+                <div class="border-l-[3px] border-solid even:border-[#ff0b54d2] odd:border-[#eefe] lg:pl-3 pl-1">
+                    <h1 class="lg:text-2xl text-[14px] text-[#1E1A52] font-semibold">Finish UI & UX Quickly</h1>
+                    <p class="text-[#200f2c] font-medium text-[10px] lg:text-[16px]">High Priority</p>
+                </div>
+                <div class="lg:space-x-3 space-x-1 lg:text-2xl">
+                    <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer"></i>
+                    <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer"></i>
+                </div>
+            </div>
+            <!-- todo - 1  -->
+            <div class="flex lg:flex-row items-center justify-between bg-[#FFFFFF] rounded-3xl drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5">
+                <div>
+                    <i class="fa-regular fa-square text-[#a6a9b3] lg:text-2xl cursor-pointer"></i>
+                </div>
+                <div class="border-l-[3px] border-solid even:border-[#ff0b54d2] odd:border-[#eefe] lg:pl-3 pl-1">
+                    <h1 class="lg:text-2xl text-[14px] text-[#1E1A52] font-semibold">Finish UI & UX Quickly</h1>
+                    <p class="text-[#200f2c] font-medium text-[10px] lg:text-[16px]">High Priority</p>
+                </div>
+                <div class="lg:space-x-3 space-x-1 lg:text-2xl">
+                    <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer"></i>
+                    <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer"></i>
+                </div>
+            </div>
+            <!-- todo - 1  -->
+            <div class="flex lg:flex-row items-center justify-between bg-[#FFFFFF] rounded-3xl drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5">
+                <div>
+                    <i class="fa-regular fa-square text-[#a6a9b3] lg:text-2xl cursor-pointer"></i>
+                </div>
+                <div class="border-l-[3px] border-solid even:border-[#ff0b54d2] odd:border-[#eefe] lg:pl-3 pl-1">
+                    <h1 class="lg:text-2xl text-[14px] text-[#1E1A52] font-semibold">Finish UI & UX Quickly</h1>
+                    <p class="text-[#200f2c] font-medium text-[10px] lg:text-[16px]">High Priority</p>
+                </div>
+                <div class="lg:space-x-3 space-x-1 lg:text-2xl">
+                    <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer"></i>
+                    <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer"></i>
+                </div>
+            </div>
+        </main>
+        <footer class="flex justify-center mt-10">
+            <button class="bg-[#9500FF] text-white px-5 py-3 rounded-lg absolute bottom-5">
+                <i class="fa-solid fa-plus"></i>
+                <span> Create Task</span>
+            </button>
+        </footer>
+    </div>
 </body>
 </html>
