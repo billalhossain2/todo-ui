@@ -31,19 +31,19 @@
 <dialog id="my_modal_1" class="modal">
   <form method="dialog" class="modal-box bg-[#9500FF]">
     <h3 class="font-bold text-lg text-white">Create a new task</h3>
-    <div class="border-b-2 border-solid border-[#d4d0d0] mb-10">
-        <input type="text" placeholder="Task name" class="input w-full max-w-xs py-4 bg-[#9500FF] text-[#ccc6c6] pl-0 focus:outline-0" />
+    <div class="border-b-2 border-solid border-[#f7f3f3] mb-10">
+        <input type="text" placeholder="Task name" class="input w-full max-w-xs py-4 bg-[#9500FF] text-[#faf7f7] pl-0 focus:outline-0 placeholder:text-white" />
     </div>
     <p class="text-white mb-2">Priority</p>
     <div class="grid lg:grid-cols-4 grid-cols-2 gap-3 justify-between mb-10">
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white">High</p>
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white">Medium</p>
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white">Low</p>
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white">Very Low</p>
+    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">High</p>
+    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">Medium</p>
+    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">Low</p>
+    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">Very Low</p>
     </div>
     <div class="modal-action flex justify-center">
       <!-- if there is a button in form, it will close the modal -->
-      <button class="bg-white text-[#9500FF] lg:px-5 lg:py-3 px-3 py-2 rounded-2xl">
+      <button class="bg-white text-[#9500FF] lg:px-5 lg:py-3 px-3 py-2 rounded-2xl drop-shadow-lg">
         <i class="fa-solid fa-plus"></i>
         <span> Create Task</span>
     </button>
@@ -82,15 +82,16 @@
         </header>
         <main class="relative">
             <!-- todo - 1  -->
-            <div class="flex lg:flex-row items-center justify-around rounded-3xl bg-white drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5">
-                <div>
-                    <i class="fa-regular fa-square text-[#a6a9b3] lg:text-2xl cursor-pointer"></i>
+            <div class="flex flex-wrap flex-col lg:flex-row items-center justify-around rounded-3xl bg-white drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5 py-5">
+                <div class="lg:block hidden">
+                    <i class="fa-regular fa-square text-[#a6a9b3] text-2xl cursor-pointer"></i>
                 </div>
-                <div class="border-l-[3px] border-solid even:border-[#ff0b54d2] odd:border-[#eefe] lg:pl-3 pl-1">
-                    <h1 class="lg:text-2xl text-[14px] font-semibold">Finish UI & UX Quickly</h1>
-                    <p class="font-medium text-[10px] lg:text-[16px]">High Priority</p>
+                <div class="lg:border-l-[3px] lg:border-b-[0] border-b-[3px] lg:pb-0 pb-3 border-solid border-[#9500FF] odd:border-[#eefe] lg:pl-3 pl-1">
+                    <h1 class="lg:text-2xl text-[18px] font-semibold">Finish UI & UX Quickly</h1>
+                    <p class="font-medium text-[14px] lg:text-[16px]">High Priority</p>
                 </div>
-                <div class="lg:space-x-3 space-x-1 lg:text-2xl">
+                <div class="lg:space-x-3 space-x-1 text-2xl lg:block flex justify-around lg:w-auto w-[100%]">
+                    <i class="fa-regular fa-square text-[#a6a9b3] text-2xl cursor-pointer lg:hidden"></i>
                     <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer"></i>
                     <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer"></i>
                 </div>
