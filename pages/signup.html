@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- google fonts  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- fontawesome icons  -->
+<script src="https://kit.fontawesome.com/5cb82b043a.js" crossorigin="anonymous"></script>
+
+<!-- daisy ui  -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+<!-- tailwind css  -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- custom css  -->
+<link rel="stylesheet" href="css/todo.css">
+<style>
+    body{
+        font-family: Poppins;
+    }
+    .arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 80px solid #9500FF;
+}
+</style>
+</head>
+<body>
+    <section class="bg-white h-screen text-center p-5 max-w-[500px] mx-auto drop-shadow-lg rounded-3xl flex flex-col justify-around items-center relative">
+        <!-- back button  -->
+        <div class="absolute lg:top-10 top-5 lg:left-7 md:left-7 left-3">
+            <a href="../index.html"><i class="fa-solid fa-chevron-left text-3xl text-[#9500FF] font-bold cursor-pointer"></i></a>
+        </div>
+        <!-- triangle  -->
+        <div class="absolute border-l-[50px] border-r-[50px] border-solid lg:border-t-[80px] md:border-t-[80px] border-t-[40px] border-l-transparent border-r-transparent border-t-[#9500ff] top-0 lg:right-10 md:right-10 right-0"></div>
+        <div>
+            <h1 class="lg:text-4xl md:text-4xl text-2xl font-semibold mb-3">Sign Up</h1>
+            <p class="lg:mb-0 mb-2">Welcome to our todo list app! The sign-up page is your gateway to organized productivity. Create an account, unlock a world of task management, and seize control of your daily to-dos effortlessly. Join now and start achieving your goals with ease!</p>
+        </div>
+        <form class="w-full space-y-5" action="#">
+           <div>
+            <input type="text" placeholder="User name" class="input input-bordered rounded-full w-full" />
+           </div>
+           <div>
+            <input type="email" placeholder="E-mail" class="input input-bordered rounded-full w-full" />
+           </div>
+           <div>
+            <input type="password" placeholder="Password" class="input input-bordered rounded-full w-full" />
+           </div>
+           <button class="bg-[#9500FF] text-white hover:bg-[#621599] lg:px-20 lg:py-3 px-10 py-2 rounded-full font-medium">Sign Up</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo UI</title>
+    <title>User Authentication</title>
 <!-- google fonts  -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,113 +26,24 @@
     }
 </style>
 </head>
-<body class="bg-[#ece8eedc] min-h-screen flex justify-center items-center flex-col">
-    <!-- modal start  -->
-<dialog id="my_modal_1" class="modal">
-  <form method="dialog" class="modal-box bg-[#9500FF]">
-    <h3 class="font-bold text-lg text-white">Create a new task</h3>
-    <div class="border-b-2 border-solid border-[#f7f3f3] mb-10">
-        <input type="text" placeholder="Task name" class="input w-full max-w-xs py-4 bg-[#9500FF] text-[#faf7f7] pl-0 focus:outline-0 placeholder:text-white" />
-    </div>
-    <p class="text-white mb-2">Priority</p>
-    <div class="grid lg:grid-cols-4 grid-cols-2 gap-3 justify-between mb-10">
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">High</p>
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">Medium</p>
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">Low</p>
-    <p class="btn bg-transparent text-white hover:text-[#9500ff] hover:bg-white border-2 border-solid border-white">Very Low</p>
-    </div>
-    <div class="modal-action flex justify-center">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="bg-white text-[#9500FF] lg:px-5 lg:py-3 px-3 py-2 rounded-2xl drop-shadow-lg">
-        <i class="fa-solid fa-plus"></i>
-        <span> Create Task</span>
-    </button>
-    </div>
-  </form>
-</dialog>
-    <!-- modal end  -->
-
-    <div class="bg-[#F5F7FA] rounded-3xl lg:p-6 p-3 flex flex-col relative drop-shadow-lg lg:min-w-[500px] min-w-[95%] my-2 md:min-w-[500px] text-[#1E1A52]">
-        <header class="relative">
-             <!-- day/night mode icon -->
-             <div class="h-10 w-10 rounded-full absolute right-0">
-                <label class="swap swap-rotate">
-
-                    <!-- this hidden checkbox controls the state -->
-                    <input type="checkbox" />
-                    
-                    <!-- sun icon -->
-                    <svg class="swap-on fill-[#a6a9b3] w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
-                    
-                    <!-- moon icon -->
-                    <svg class="swap-off fill-[#a6a9b3] w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
-                    
-                  </label>
+<body>
+    <div class="text-center flex justify-center items-center flex-col gap-20 bg-white drop-shadow-lg lg:max-w-[500px] max-w-[95%] h-screen  rounded-3xl mx-auto">
+        <div class="max-w-[500px]">
+            <img class="max-h-[200px]" src="../img/todo-checker.jpg" alt="">
+            <h1 class="lg:text-4xl text-2xl font-medium mt-10">Task/Todo List & <br> Management</h1>
+        </div>
+        <div>
+            <div class="mb-5">
+                <a href="./pages/login.html">
+                    <button class="bg-[#9500FF] text-white hover:bg-[#621599] px-20 py-3 rounded-full font-medium">Log in</button>
+                </a>
             </div>
-            <!-- avatar start  -->
-              <div class="avatar">
-                <div class="w-24 rounded-full">
-                  <img src="img/avatar.jpg" />
-                </div>
-              </div>
-              <h3 class="mb-3">Good Evening, Billal</h3>
-
-              <!-- search field start  -->
-              <div class="form-control mb-7">
-                  <input type="text" placeholder="Search…" class="input input-bordered rounded-full bg-white" />
-              </div>
-              <!-- search field end  -->
-
-            <!-- avatar end  -->
-            <div class="flex items-center justify-between mb-6">
-                <div>
-                    <p class="text-[#A2A2BA]"> 28.07.2023 </p>
-                    <h1 class="font-semibold lg:text-3xl text-2xl">Today Tasks</h1>
-                </div>
+            <div>
+                <a href="./pages/signup.html">
+                    <button class="text-[#9500FF] font-bold">Sign Up</button>
+                </a>
             </div>
-            <nav class="flex gap-5 mb-6">
-                <p class="text-[#434270] cursor-pointer">All</p>
-                <p class="text-[#b3b4c0] cursor-pointer">Completed</p>
-                <p class="text-[#b3b4c0] cursor-pointer">Incompleted</p>
-            </nav>
-        </header>
-        <main class="relative">
-            <!-- todo - 1  -->
-            <div class="flex items-center justify-around rounded-3xl bg-white drop-shadow-lg lg:p-4 p-2 lg:gap-7 gap-3 mb-5 py-5">
-                <div class="lg:block md:block hidden">
-                    <i class="fa-regular fa-square text-[#a6a9b3] text-2xl cursor-pointer"></i>
-                </div>
-                <div class="lg:border-l-[3px] lg:border-b-[0] border-b-[3px] lg:pb-0 pb-3 border-solid border-[#9500FF] odd:border-[#eefe] lg:pl-3 pl-1">
-                    <h1 class="lg:text-2xl text-[18px] font-semibold">Finish UI & UX Quickly</h1>
-                    <p>5:30 PM</p>
-                    <p class="font-medium text-[14px] lg:text-[16px]">High Priority</p>
-                </div>
-                <div class="lg:space-x-3 md:space-x-3 space-x-1 text-2xl lg:flex md:flex lg:justify-around md:justify-end lg:w-auto md:w-auto items-center w-[100%] hidden">
-                    <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer"></i>
-                    <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer"></i>
-                </div>
-                <!-- dropdown start  -->
-                <div class="relative text-2xl lg:hidden md:hidden">
-                    <i id="three-dot" class="fa-solid fa-ellipsis"></i>
-                    <div id="menu" tabindex="0" class="hidden flex items-center justify-around w-40 p-2 shadow bg-white rounded-box absolute right-0">
-                    <i class="fa-regular fa-square text-[#a6a9b3] cursor-pointer hover:text-[#9500ff]"></i>
-                    <i class="fa-regular fa-pen-to-square text-[#a6a9b3] cursor-pointer hover:text-[#9500ff]"></i>
-                    <i class="fa-solid fa-xmark text-[#a6a9b3] cursor-pointer hover:text-[#9500ff]"></i>
-                    </div>
-                  </div>
-                <!-- dropdown end  -->
-            </div>
-        </main>
-        <footer class="flex justify-center mt-20 z-[2]">
-            <button onclick="my_modal_1.showModal()" class="z-[1] bg-[#9500FF] text-white lg:px-5 lg:py-3 px-3 py-2 rounded-lg absolute bottom-5">
-                <i class="fa-solid fa-plus"></i>
-                <span> Create Task</span>
-            </button>
-        </footer>
+        </div>
     </div>
-    <script>
-        const menu = document.getElementById('menu');
-        document.getElementById('three-dot').onclick = ()=> menu.classList.toggle('hidden')
-    </script>
 </body>
 </html>
